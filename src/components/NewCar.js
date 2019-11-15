@@ -84,14 +84,19 @@ export default class NewCar extends Component {
     };
     if (this.state.descricao == "") {
       alert("Por favor preencha a descrição");
+      this.setState({ load: false });
     } else if (this.state.placa == "") {
       alert("Por favor preencha a placa");
+      this.setState({ load: false });
     } else if (this.state.modelo == "") {
       alert("Por favor preencha o modelo");
+      this.setState({ load: false });
     } else if (this.state.cor == "") {
       alert("Por favor preencha a cor");
+      this.setState({ load: false });
     } else if (this.state.valor == "") {
       alert("Por favor preencha o valor");
+      this.setState({ load: false });
     } else {
       await urlApi
         .post("carros", bodyData)
